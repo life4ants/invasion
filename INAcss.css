@@ -1,0 +1,517 @@
+/* 
+    Created on : Aug 10, 2016, 1:37:10 PM
+    Author     : Buckling
+*/
+.big {font-size: xx-large;}
+.center { text-align: center;}
+.help
+{
+    max-width: 1000px;
+}
+header
+{
+    background-color: #18B84A;
+    text-align: center;
+    padding: 2px;
+}
+
+.topbar
+{
+    position: fixed;
+    background-color: #18B84A;   
+    width: 97%;
+    max-width: 1170px; 
+    min-height: 75px;
+    top: 0px;
+    padding: 15px;
+}
+#menuBox
+{
+    float: left;
+}
+#diceBox
+{
+    float: left;
+    margin-left: 20px;
+}
+#tools
+{   
+    position: absolute;
+}
+#infoBox
+{
+    font-weight: bold;
+    margin-left: 10px;
+    min-width: 170px;
+    float: left;
+}
+#titleBox
+{
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+}
+#gameview
+{
+    position: absolute; 
+    top: 100px;
+}
+#gameBoard
+{
+    width: 1200px;
+}
+#showBox
+{
+    position: fixed;
+    left: 50%;
+    top: 150px;
+    
+}
+#gameMenu
+{
+    width: 460px;
+    height: 350px;
+    margin-left: -230px;
+    border: solid;
+    background-color: white;
+    padding: 10px;
+}
+#left
+{
+    float: left;
+}
+#mainMenu
+{
+    width: 300px;
+    height: 350px;
+    margin-left: -150px;
+    border: solid;
+    background-color: white;
+    padding: 10px;
+}
+#settingsBox
+{
+    width: 420px;
+    height: 250px;
+    margin-left: -210px;
+    border: solid;
+    background-color: white;
+    padding: 10px;
+}
+#popup
+{
+    height: 200px;
+    width: 200px;
+    margin-left: -100px;
+    border: solid;
+    background-color: white;
+    padding: 10px;
+}
+#cardBox
+{
+    position: fixed;
+    left: 15%;
+    top: 210px;
+}
+#words
+{
+    position: absolute;
+    top: 173px;
+    left: 8px;
+    width: 135px;
+    color: red;
+    text-align: center;
+}
+#cardMenu
+{
+    width: 150px;
+    border: solid;
+    margin-left: -75px;
+    background-color: white;
+    padding: 10px;
+}
+.sidebox
+{
+    width: 280px;
+    float: right;
+}
+.label
+{
+    position: absolute;
+    left: 4px;
+    font-weight: 900;
+    font-family: serif;
+    background-color: #F4ECC0;
+}
+.icon
+{
+    position: absolute;
+    top: 11px;
+}
+
+.countrybox
+{
+    position: absolute;
+    width: 25px;
+    height: 35px;
+}
+#country0
+{   left: 160px;
+    top: 90px;
+}
+#country1
+{   left: 280px;
+    top: 170px;
+}
+#country2
+{   left: 330px;
+    top: 400px;
+}
+#country3
+{   left: 440px;
+    top: 220px;
+}
+#country4
+{   left: 440px;
+    top: 400px;
+}
+#country5
+{   left: 535px;
+    top: 430px;
+}
+#country6
+{   left: 610px;
+    top: 240px;
+}
+#country7
+{   left: 625px;
+    top: 430px;
+}
+#country8
+{   left: 760px;
+    top: 450px;
+}
+#country9
+{   left: 925px;
+    top: 400px;
+}
+#country10
+{   left: 1020px;
+    top: 306px;
+}
+#country11
+{   left: 1130px;
+    top: 370px;
+}
+#country12
+{   left: 1085px;
+    top: 470px;
+}
+#country13
+{   left: 1035px;
+    top: 460px;
+}
+#country14
+{   left: 1005px;
+    top: 495px;
+}
+#country15
+{   left: 990px;
+    top: 550px;
+}
+#country16
+{   left: 945px;
+    top: 565px;
+}
+#country17
+{   left: 935px;
+    top: 620px;
+}
+#country18
+{   left: 925px;
+    top: 680px;
+}
+#country19
+{   left: 885px;
+    top: 665px;
+}
+#country20
+{   left: 855px;
+    top: 645px;
+}
+#country21
+{   left: 835px;
+    top: 695px;
+}
+#country22
+{   left: 805px;
+    top: 655px;
+ }
+#country23
+{   left: 815px;
+    top: 595px;
+}
+#country24
+{   left: 745px;
+    top: 585px;
+}
+#country25
+{   left: 765px;
+    top: 665px;
+}
+#country26
+{   left: 805px;
+    top: 735px;
+}
+#country27
+{   left: 935px;
+    top: 725px;
+}
+#country28
+{   left: 908px;
+    top: 760px;
+}
+#country29
+{   left: 870px;
+    top: 790px;
+}
+#country30
+{   left: 914px;
+    top: 870px;
+}
+#country31
+{   left: 815px;
+    top: 800px;
+}
+#country32
+{   left: 770px;
+    top: 805px;
+ }
+#country33
+{   left: 728px;
+    top: 840px;
+}
+#country34
+{   left: 725px;
+    top: 770px;
+}
+#country35
+{   left: 715px;
+    top: 700px;
+}
+#country36
+{   left: 700px;
+    top: 625px;
+}
+#country37
+{   left: 675px;
+    top: 565px;
+}
+#country38
+{   left: 600px;
+    top: 535px;
+}
+#country39
+{   left: 600px;
+    top: 590px;
+}
+#country40
+{   left: 610px;
+    top: 645px;
+}
+#country41
+{   left: 625px;
+    top: 700px;
+}
+#country42
+{   left: 645px;
+    top: 760px;
+ }
+#country43
+{   left: 620px;
+    top: 840px;
+}
+#country44
+{   left: 510px;
+    top: 780px;
+}
+#country45
+{   left: 520px;
+    top: 690px;
+}
+#country46
+{   left: 500px;
+    top: 615px;
+}
+#country47
+{   left: 475px;
+    top: 540px;
+}
+#country48
+{   left: 400px;
+    top: 585px;
+}
+#country49
+{   left: 340px;
+    top: 510px;
+}
+#country50
+{   left: 320px;
+    top: 570px;
+}
+#country51
+{   left: 310px;
+    top: 725px;
+}
+#country52
+{   left: 360px;
+    top: 660px;
+ }
+#country53
+{   left: 435px;
+    top: 680px;
+}
+#country54
+{   left: 425px;
+    top: 780px;
+}
+#country55
+{   left: 342px;
+    top: 825px;
+}
+#country56
+{   left: 430px; 
+    top: 870px;
+}
+#country57
+{   left: 395px;
+    top: 945px;
+}
+#country58
+{   left: 460px;
+    top: 940px;
+}
+#country59
+{   left: 495px;
+    top: 890px;
+}
+#country60
+{   left: 568px;
+    top: 925px;
+}
+#country61
+{   left: 518px;
+    top: 965px;
+}
+#country62
+{   left: 512px;
+    top: 1023px;
+ }
+#country63
+{   left: 550px;
+    top: 1005px;
+}
+#country64
+{   left: 595px;
+    top: 1010px;
+}
+#country65
+{   left: 604px;
+    top: 950px;
+}
+#country66
+{   left: 626px;
+    top: 988px;
+}
+#country67
+{   left: 667px;
+    top: 1069px;
+}
+#country68
+{   left: 630px;
+    top: 1070px;
+}
+#country69
+{   left: 592px;
+    top: 1040px;
+}
+#country70
+{   left: 532px;
+    top: 1058px;
+}
+#country71
+{   left: 575px;
+    top: 1075px;
+}
+#country72
+{   left: 610px;
+    top: 1105px;
+ }
+#country73
+{   left: 670px;
+    top: 1115px;
+}
+#country74
+{   left: 748px;
+    top: 1123px;
+}
+#country75
+{   left: 785px;
+    top: 1069px;
+}
+#country76
+{   left: 809px;
+    top: 1030px;
+}
+#country77
+{   left: 825px;
+    top: 1055px;
+}
+#country78
+{   left: 820px;
+    top: 1097px;
+}
+#country79
+{   left: 790px;
+    top: 1145px;
+}
+#country80
+{   left: 823px;
+    top: 1168px;
+}
+#country81
+{   left: 855px;
+    top: 1145px;
+}
+#country82
+{   left: 900px;
+    top: 1180px;
+ }
+#country83
+{   left: 925px;
+    top: 1235px;
+}
+#country84
+{   left: 992px;
+    top: 1265px;
+}
+#country85
+{   left: 1026px;
+    top: 1042px;
+}
+#country86
+{   left: 975px;
+    top: 977px;
+}
+#country87
+{   left: 1045px;
+    top: 940px;
+}
+#country88
+{   left: 1113px;
+    top: 1002px;
+}
+#country89
+{   left: 1145px;
+    top: 998px;
+}
