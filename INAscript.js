@@ -195,17 +195,17 @@ function settingsMenu()
     <input type='radio' name='sets' id='twoSets'>2  \n\
     <input type='radio' name='sets' id='threeSets'>3  \n\
     <input type='radio' name='sets' id='unlimitedSets'>Unlimited<br><br>\n\
-    <input type='checkbox' id='auto_reserves'>Automatically get reserves<br>\n\
-    <input type='checkbox' id='tiedRoll' CHECKED=''>Defense wins a tie<br><br>\n\
+    <input type='checkbox' id='auto_reserves' CHECKED=''>Automatically get reserves<br>\n\
+    <input type='checkbox' id='tiedRoll' >Defense always wins a tie<br><br>\n\
     <button type='button' onclick='mainMenu()'>Cancel</button>\n\
     <button type='button' onclick='changeSettings()'>OK</button>\n\
     </div></div>";
     
-    if (settings.autoReserves === "true")  
-        document.getElementById('auto_reserves').checked = true;
+    if (settings.autoReserves === "false")  
+        document.getElementById('auto_reserves').checked = false;
     
-    if (settings.defenseWinsTie === "false")  
-        document.getElementById('tiedRoll').checked = false;
+    if (settings.defenseWinsTie === "true")  
+        document.getElementById('tiedRoll').checked = true;
     
     if (settings.randomSelect === "false")
         document.getElementById('selectable').checked = true;
@@ -594,6 +594,17 @@ function newGame()
         if (confirm("Do you want to start a new game? Your current game will not be saved!")){}
         else
             return;
+        }
+        if (settings.randomSelect === "false")
+        {
+            for (var i =0; i<_players.length; i++)
+            {
+                if (_players[i].isComputer)
+                {
+                    alert("The country selection settings are set to selectable. The computer players are not programmed to \nselect their own countries. Please change the settings or play without computer players.");
+                    return;
+                }
+            }
         }
         if (confirm(show))
         {
@@ -1706,6 +1717,10 @@ function setupPassing()   //sets up rules for passing troops at the end of the t
         if (settings.passing === "one" || settings.passing === "oneAnywhere")
         {
             showCards();
+            nextPlayer();
+            show();
+            startTurn();
+            return;
         }
         else if (settings.passing === "threeAnywhere")
         {
@@ -2353,10 +2368,10 @@ function shuffleArray(array)
 function setDefaultSettings()
 {
     settings = {
-        "autoReserves": "false",
-        "defenseWinsTie": "true",
+        "autoReserves": "true",
+        "defenseWinsTie": "false",
         "randomSelect": "true",
-        "passing": "one",
+        "passing": "threeAnywhere",
         "numOfCards": "5",
         "numOfSets": "1"
     };
@@ -4007,9 +4022,15 @@ function computerReserves()
 }
 function computerPassTroops()
 {
-    if (settings.passing === "threeAnywhere")
+    if (settings.passing !== "one")
     {
-        for (var i=0; i<3; i++)
+        var times;
+        if (settings.passing === "oneAnywhere")
+            times = 1;
+        else
+            times = 3;
+            
+        for (var i=0; i<times; i++)
         {
             var thing = numOfEnemiesAllMyCountries();
             for (var j=thing.length-1; j>=0; j--)
@@ -4032,10 +4053,6 @@ function computerPassTroops()
             }
         }
     }
-    else {
-       alert(players[sessionStorage.turnIndex].name + " doesn't know how to pass troops");
-       return; 
-   }
 }
 function findNearestToPass(index)
 {
@@ -4120,7 +4137,6 @@ function computerTurnInCards()
                     }
                 }
                 sessionStorage.setItem("players", JSON.stringify(players));
-                console.log(players[sessionStorage.turnIndex].name+" turned in cards.(line 3751)");
                 turnInCards3(turnIn);
             }
             else
